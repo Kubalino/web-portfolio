@@ -1,6 +1,6 @@
 :root{
     --mainColor: #0B0B0B;
-    --secondaryColor: #25272A;
+    --secondaryColor: #37383A;
 
     --borderColor: #c1c1c1;
 
@@ -9,7 +9,7 @@
     --thirdText: #0043A5;
 
     --previewBG: rgb(37, 39, 42, 0.8);
-    --previewShadow: #25272A;  
+    --previewShadow: #37383A ;  
 }
 
 * {
@@ -176,6 +176,11 @@ h6 {font-size: 16px;}
     border: 3px solid var(--borderColor);
 }
 
+#github-logo{
+    width: 70px;
+    height: 70px;
+}
+
 .right-column-one {
     grid-area: right-column-one;
     display: grid;
@@ -231,15 +236,66 @@ h6 {font-size: 16px;}
 
 .column-two {
     grid-area: column-two;
+    padding: 20px;
 }
 
 .techs-wrapper {
-    border: 2px dashed coral;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    'backend-title frontend-title interested-title'
+    'backend-wrapper frontend-wrapper interested-wrapper';
+}
+
+.techs-wrapper .backend-title, .frontend-title, .interested-title {
+    text-align: center;
+}
+
+.backend-wrapper {
+    grid-area: backend-wrapper;
+}
+
+.frontend-wrapper {
+    grid-area: frontend-wrapper;
+}
+
+.interested-wrapper {
+    grid-area: interested-wrapper;
+}
+
+.backend-title {
+    grid-area: backend-title;
+    
+}
+
+.frontend-title {
+    grid-area: frontend-title;
+}
+
+.interested-title {
+    grid-area: interested-title;
+}
+
+.backend-wrapper, .frontend-wrapper, .interested-wrapper {
+    
+    background-color: var(--secondaryColor);
+    padding:10px;
+    margin: 20px;
+
+    -webkit-box-shadow: 10px 10px 5px -4px rgba(36,129,207,1);
+    -moz-box-shadow: 10px 10px 5px -4px rgba(36,129,207,1);
+    box-shadow: 10px 10px 5px -4px rgba(36,129,207,1);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .logo {
-    width: 10%;
-    height: 10%;
+    max-width: 100px;
+    max-height: 100px;
+    margin: 5px;
 }
 
 
@@ -300,10 +356,23 @@ h6 {font-size: 16px;}
     .main-container {
         width: 95%;
     }
+
+    #hero {
+        background-size: cover;
+        background-position: top right;
+    }
+
+    .techs-wrapper {
+        display: block;
+    }
+
+    .backend-wrapper, .frontend-wrapper, .interested-wrapper {
+        margin: 25px;
+    }
 }
 
 @media screen and (max-width: 800px) {
-
+    
     .about-wrapper {
         grid-template-columns: 1fr;
         grid-template-areas:
@@ -317,9 +386,29 @@ h6 {font-size: 16px;}
         justify-content: center;
     }
 
+    .techs-wrapper {
+        display: block;
+    }
 
+    .backend-wrapper, .frontend-wrapper, .interested-wrapper {
+        margin: 20px;
+    }
 
-    @media screen and (max-width: 450px){
+    @media screen and (max-width: 600px){
+        #preview-shadow{
+            max-width: 400px;
+            height: 330px;
+            padding-left: 10px;
+            padding-top: 10px;
+        }
+    
+        #preview{
+            width: 400px;
+        }
+    
+    }
+
+    @media screen and (max-width: 500px){
         #preview-shadow{
             max-width: 280px;
             height: 500px;
@@ -329,6 +418,15 @@ h6 {font-size: 16px;}
     
         #preview{
             width: 280px;
+        }
+
+        .logo {
+            max-width: 100px;
+            max-height: 100px;
+        }
+
+        .backend-wrapper, .frontend-wrapper, .interested-wrapper {
+            display: block;
         }
     
     }
