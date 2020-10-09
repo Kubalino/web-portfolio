@@ -1,6 +1,6 @@
 :root{
     --mainColor: #0B0B0B;
-    --secondaryColor: #37383A;
+    --secondaryColor: #242526;
 
     --borderColor: #c1c1c1;
 
@@ -300,6 +300,80 @@ h6 {font-size: 16px;}
 
 
 /* End About Section */
+
+.projects {
+    text-align: center;
+    padding: 20px;
+}
+
+.post-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 320px);
+    gap: 50px;
+    justify-content: center;
+    padding: 50px 0px;
+}
+
+.post {
+    border: 1px solid var(--borderColor);
+    -webkit-box-shadow: 10px 10px 5px -4px rgba(55,56,58,1);
+    -moz-box-shadow: 10px 10px 5px -4px rgba(55,56,58,1);
+    box-shadow: 10px 10px 5px -4px rgba(55,56,58,1);
+}
+
+.thumbnail {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: fill;
+}
+
+.post-preview {
+    background-color: var(--mainColor);
+    padding: 15px;
+}
+
+.post-title {
+    color: var(--thirdText);
+    margin: 5px;
+    font-size: 20px;    
+}
+
+.post-intro {
+    color: var(--borderColor);
+    font-size:16px;
+}
+
+.link-btn {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.link {
+    margin: 10px 0px;
+    text-align: center;
+    border: 1px solid var(--secondaryText);
+    background-color: var(--secondaryColor);
+    color: var(--secondaryText);
+    padding: 5px;
+    font-size: 20px;
+}
+
+.link:hover {
+    background-color: var(--thirdText);
+    border: 2px solid var(--secondaryColor);
+    color: var(--borderColor);
+    transform: scale(1.3);
+}
+
+
+
+
+/* Portfolio Section */
+
+/* End of Portfolio Section */
 
 
 .s1 {
