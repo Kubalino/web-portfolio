@@ -2,14 +2,16 @@
     --mainColor: #0B0B0B;
     --secondaryColor: #242526;
 
-    --borderColor: #c1c1c1;
+    --borderColor: #616A6B;
 
     --mainText: white;
     --secondaryText: #2481CF;
     --thirdText: #0043A5;
 
     --previewBG: rgb(37, 39, 42, 0.8);
-    --previewShadow: #37383A ;  
+    --previewShadow: #37383A;
+    
+    --btnColor: black;
 }
 
 * {
@@ -53,6 +55,11 @@ h6 {font-size: 16px;}
     justify-content: center;
 }
 
+.section-title {
+    text-align: center;
+    padding: 20px;
+}
+
 /* Hero Section*/
 
 #hero {
@@ -91,12 +98,21 @@ h6 {font-size: 16px;}
     animation-delay: 1s;
 }
 
+#hero a {
+    animation: text_reveal -5s ease forwards;
+    animation-delay: 4s;
+}
+
 #hero h1:nth-child(1) {
     animation-delay: 1s;
 }
 
 #hero h1:nth-child(2) {
     animation-delay: 2s;
+}
+
+#hero h1:nth-child(3) {
+    animation-delay: 3s;
 }
 
 #hero h1 span {
@@ -118,7 +134,12 @@ h6 {font-size: 16px;}
     animation-delay: 1.5s;
 }
 
+#hero h1:nth-child(3) span {
+    animation-delay: 2.5s;
+}
+
 #hero .cta {
+    visibility: hidden;
     display: inline-block;
     padding: 10px 30px;
     color: var(--secondaryText);
@@ -153,10 +174,6 @@ h6 {font-size: 16px;}
 
 .about-title {
     grid-area: about-title; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 15px;
 }
 
 .left-column-one {
@@ -296,29 +313,30 @@ h6 {font-size: 16px;}
     max-width: 100px;
     max-height: 100px;
     margin: 5px;
+    object-fit: contain;
 }
-
 
 /* End About Section */
 
-.projects {
-    text-align: center;
-    padding: 20px;
-}
+/* Projects Section */
 
 .post-wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, 320px);
-    gap: 50px;
+    gap: 75px;
     justify-content: center;
     padding: 50px 0px;
 }
 
 .post {
-    border: 1px solid var(--borderColor);
-    -webkit-box-shadow: 10px 10px 5px -4px rgba(55,56,58,1);
-    -moz-box-shadow: 10px 10px 5px -4px rgba(55,56,58,1);
-    box-shadow: 10px 10px 5px -4px rgba(55,56,58,1);
+    border: 1px solid var(--mainColor);
+    -webkit-box-shadow: -1px 4px 20px 6px rgba(0,0,0,1);
+    -moz-box-shadow: -1px 4px 20px 6px rgba(0,0,0,1);
+    box-shadow: -1px 4px 20px 6px rgba(0,0,0,1);
+}
+
+.post:hover {
+    transform: scale(1.1);
 }
 
 .thumbnail {
@@ -340,7 +358,7 @@ h6 {font-size: 16px;}
 }
 
 .post-intro {
-    color: var(--borderColor);
+    color: whitesmoke;
     font-size:16px;
 }
 
@@ -365,16 +383,52 @@ h6 {font-size: 16px;}
     background-color: var(--thirdText);
     border: 2px solid var(--secondaryColor);
     color: var(--borderColor);
-    transform: scale(1.3);
+    transform: scale(1.2);
 }
 
+/* End of Projects Section */
 
+/* Get In Touch Section */
 
+#contact-form {
+    display: block;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid var(--borderColor);
+    padding: 15px;
+    border-radius: 5px;
+    background-color: var(--secondaryColor);
+    margin-bottom: 50px;
+}
 
-/* Portfolio Section */
+#contact-form label {
+    line-height: 2.7em;
+}
 
-/* End of Portfolio Section */
+#contact-form textarea {
+    min-height: 150px;
+}
 
+.input-field {
+    width: 100%;
+    background-color: var(--mainColor);
+    border-radius: 5px;
+    border: 1px solid var(--borderColor);
+    font-size: 16px;
+    padding: 10px;
+}
+
+#submit-btn {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px 0px;
+    color: #fff;
+    background-color: var(--btnColor);
+    border: none;
+    font-size: 18px;
+}
+
+/* End of Get In Touch Section */
 
 .s1 {
     background-color: var(--mainColor);
@@ -384,6 +438,10 @@ h6 {font-size: 16px;}
 .s2 {
     background-color: var(--secondaryColor);
     border-bottom: 1px solid var(--borderColor);
+}
+
+footer {
+    background-color: var(--secondaryColor);
 }
 
 /* .nav-wrapper {
