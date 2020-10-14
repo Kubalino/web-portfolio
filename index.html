@@ -18,23 +18,35 @@
 </head>
 <body>
 
+    <div>
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="#">Carlos Noronha</a>
+                </div>
+                <div id="mainListDiv" class="main_list">
+                    <ul class="navlinks">
+                        <li><a href="?/html#about">Who Am I</a></li>
+                        <li><a href="?/html#projects">My Projects</a></li>
+                        <li><a href="?/html#contact">Get In Touch</a></li>
+                    </ul>
+                </div>
+                <span class="navTrigger">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </span>
+            </div>
+        </nav>
+    </div>
+
     <section id="hero">
         <div class="hero container">
-
-            <!-- <div class="nav-wrapper">
-                <ul class="nav-elements">
-                    <li id="home" class="nav-element">Home</li>
-                    <li id="about" class="nav-element">About</li>
-                    <li id="projects" class="nav-element">My Work</li>
-                    <li id="contacts" class="nav-element">Contact</li>
-                </ul>
-            </div>  -->
-
             <div>
                 <h1>Hello,<span></span></h1>
                 <h1>My Name Is<span></span></h1>
                 <h1>Carlos Noronha<span></span></h1>
-                <a href="?/html#about" type="button" class="cta">Junior Web Developer</a>
+                <a href="?/html#about" type="button" class="cta">Know More</a>
             </div>
         </div>    
     </section>
@@ -129,7 +141,7 @@
         </div>
     </section>
 
-    <section class="s2">
+    <section id="projects" class="s2">
         <div class="main-container">
             <h2 class="section-title">My Projects</h2>
 
@@ -188,7 +200,7 @@
         </div>
     </section>
 
-    <section class="s1">
+    <section id="contact" class="s1">
         <div class="main-container">
             <h2 class="section-title">Get In Touch</h2>
 
@@ -218,6 +230,9 @@
             <p>Created by Carlos Noronha</p>
         </div>
     </footer>
+
+    <!-- Jquery needed -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
     <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
 
