@@ -1,0 +1,28 @@
+:root{
+    --mainColor: #F5F5F5;
+    --secondaryColor: #E6E6E6;
+    
+    --navbarIcons: #F5F5F5;
+
+    --mainText: 070719;
+    --secondaryText: #2963C5;
+    --thirdText: #1E488E;
+
+    --previewBG: rgb(204, 204, 204, 0.7);
+    --previewShadow: #CCCCCC;
+    
+    --top-spacing: 70px;
+}
+
+.post {
+    border: 1px solid var(--secondaryText);
+    -webkit-box-shadow: -1px 4px 20px 6px rgb(112,112,112,1);
+    -moz-box-shadow: -1px 4px 20px 6px rgb(112,112,112,1);
+    box-shadow: -1px 4px 20px 6px rgb(112,112,112,1);
+}
+
+.backend-wrapper, .frontend-wrapper, .interested-wrapper {
+    -webkit-box-shadow: 10px 10px 5px -4px rgba(36,129,207,1);
+    -moz-box-shadow: 10px 10px 5px -4px rgba(36,129,207,1);
+    box-shadow: 10px 10px 5px -4px rgba(36,129,207,1);
+}

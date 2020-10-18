@@ -2,22 +2,28 @@
     --mainColor: #0B0B0B;
     --secondaryColor: #242526;
 
-    --borderColor: #616A6B;
+    --navbarIcons: #F5F5F5;
 
-    --mainText: white;
+    --mainText: #F5F5F5;
     --secondaryText: #2481CF;
     --thirdText: #0043A5;
 
     --previewBG: rgb(37, 39, 42, 0.8);
     --previewShadow: #37383A;
-    
-    --btnColor: black;
 
     --top-spacing: 60px;
 }
 
 html {
     scroll-padding-top: var(--top-spacing);
+}
+
+body {
+    background-color: var(--mainColor);  
+}
+
+body * {
+    transition: 0.3s;
 }
 
 * {
@@ -86,12 +92,62 @@ h6 {font-size: 16px;}
 
 .nav .logo a {
     text-decoration: none;
-    color: var(--mainText);
+    color: var(--navbarIcons);
     font-size: 1.2rem;
 }
 
 .nav .logo a:hover {
     color: var(--secondaryText);
+}
+
+.theme-dot {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: black;
+
+    margin: 5px;
+    border: 3px solid var(--secondaryText);
+
+    cursor: pointer;
+}
+
+.theme-dot:hover {
+    transform: scale(1.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.left-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 20px;
+    width: 250px;  
+}
+
+.left-wrapper p {
+    color: var(--navbarIcons);
+}
+
+.light-theme, .dark-theme {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#light-mode {
+    background-color: #F5F5F5;
+    border: 3px solid #2963C5
+}
+
+#dark-mode {
+    background-color: #0B090A;
+    border: 3px solid #DE061D;
 }
 
 .nav div.main_list {
@@ -117,14 +173,14 @@ h6 {font-size: 16px;}
 
 .nav div.main_list ul li a {
     text-decoration: none;
-    color: var(--mainText);
+    color: var(--secondaryText);
     line-height: 65px;
     font-size: 1.2rem;
-    
+    padding-bottom: 5px;
 }
 
 .nav div.main_list ul li a:hover {
-    color: var(--secondaryText);
+    border-bottom: 2px solid var(--secondaryText);
 }
 
 .navTrigger {
@@ -140,8 +196,27 @@ h6 {font-size: 16px;}
 
 .affix {
     padding: 0px;
-    background-color: rgba(0,0,0,1);
+    background-color: var(--mainColor);
+    border-bottom: 2px solid var(--previewBG);
+}
+
+.affix div.main_list ul li a {
+    padding-bottom: 5px;
+    color: var(--secondaryText);
+}
+
+.affix div.main_list ul li a:hover {
     border-bottom: 2px solid var(--secondaryText);
+}
+
+.affix .logo a {
+    text-decoration: none;
+    color: var(--secondaryText);
+    font-size: 1.2rem;
+}
+
+.affix .left-wrapper p{
+    color: var(--secondaryText);
 }
 
 .navTrigger {
@@ -156,7 +231,7 @@ h6 {font-size: 16px;}
 }
 
 .navTrigger i {
-    background-color: #fff;
+    background-color: var(--thirdText);
     border-radius: 2px;
     content: '';
     display: block;
@@ -330,8 +405,8 @@ h6 {font-size: 16px;}
     margin: 0 auto;
     width: 250px;
     height: 250px;
-    object-fit: cover;
-    border: 3px solid var(--borderColor);
+    object-fit: fill;
+    border: 3px solid var(--thirdText);
 }
 
 .social {
@@ -348,16 +423,31 @@ h6 {font-size: 16px;}
     height: 40px;
 }
 
+.social-link:hover{
+    transform: scale(1.2);
+}
+
 .download-btn-wrapper {
-    background-color: var(--secondaryColor);
-    border: 2px solid var(--secondaryText);
+    background-color: var(--mainColor);
+    border: 2px solid var(--mainText);
+    border-radius: 7px;
     text-align: center;
     align-self: center;
     padding: 10px;
 }
 
+.download-btn-wrapper:hover {
+    transform: scale(1.1);
+    background-color: var(--secondaryText);
+    border: 2px solid var(--secondaryColor);
+}
+
 .download-btn {
-    color: var(--secondaryText);
+    color: var(--mainText);
+}
+
+.download-btn:hover {
+    color: var(--secondaryColor); 
 }
 
 .download-text {
@@ -391,7 +481,7 @@ h6 {font-size: 16px;}
 
 #preview {
     width: 550px;
-    border: 1.5px solid #17a2b8;
+    border: 1.5px solid var(--thirdText);
     background-color: var(--previewBG);
     padding: 15px;
     position: relative;
@@ -401,8 +491,8 @@ h6 {font-size: 16px;}
     width: 7px;
     height: 7px;
     border-radius: 50%;
-    border: 1.5px solid #17a2b8;
-    background-color: #ffffff;   
+    border: 1.5px solid var(--thirdText);
+    background-color: var(--mainColor);   
     position: absolute;
 }
 
@@ -531,7 +621,6 @@ h6 {font-size: 16px;}
 }
 
 .post-intro {
-    color: whitesmoke;
     font-size:16px;
     text-align: justify;
 }
@@ -555,8 +644,8 @@ h6 {font-size: 16px;}
 
 .link:hover {
     background-color: var(--thirdText);
-    border: 2px solid var(--secondaryColor);
-    color: var(--mainText);
+    border: 2px solid var(--mainColor);
+    color: var(--mainColor);
 }
 
 .project-note {
@@ -565,7 +654,7 @@ h6 {font-size: 16px;}
 }
 
 .project-note:hover {
-    color: var(--mainText);
+    color: var(--mainColor);
 }
 
 /* Get In Touch Section */
@@ -574,7 +663,7 @@ h6 {font-size: 16px;}
     display: block;
     max-width: 600px;
     margin: 0 auto;
-    border: 1px solid var(--borderColor);
+    border: 1px solid var(--previewShadow);
     padding: 15px;
     border-radius: 5px;
     background-color: var(--secondaryColor);
@@ -602,10 +691,15 @@ h6 {font-size: 16px;}
     margin-top: 10px;
     width: 100%;
     padding: 10px 0px;
-    color: #fff;
-    background-color: var(--btnColor);
+    color: var(--mainColor);
+    background-color: var(--secondaryText);
     border: none;
+    border-radius: 5px;
     font-size: 18px;
+}
+
+.submit-span {
+    color: var(--mainColor);
 }
 
 /* Others */
@@ -640,7 +734,7 @@ footer {
     justify-content: center;
     align-items: center;
     margin: 0px 20px;
-    padding: 5px 0px;
+    padding: 10px 0px;
 }
 
 /* Media Screens */
@@ -696,12 +790,22 @@ footer {
 }
 
 @media screen and (max-width:768px) {
+
+    .nav-container {
+        display: block;
+
+    }
     .navTrigger {
         display: block;
     }
-    .nav div.logo {
-        margin-left: 15px;
+    .nav .logo {
+        padding-left: 5px;
     }
+
+    .left-wrapper {
+        min-width: 200px;
+    }
+   
     .nav div.main_list {
         width: 100%;
         height: 0;
@@ -714,12 +818,11 @@ footer {
     .nav div.main_list ul {
         flex-direction: column;
         width: 100%;
-        height: 100vh;
+        height: 1000px;
         right: 0;
         left: 0;
         bottom: 0;
-        background-color: #111;
-        /*same background color of navbar*/
+        background-color: var(--mainColor);
         background-position: center top;
     }
     .nav div.main_list ul li {
@@ -738,7 +841,10 @@ footer {
 }
 
 @media screen and (max-width: 800px) {
-    
+
+    .logo {
+        margin: 0px;
+    }
     .about-wrapper {
         grid-template-columns: 1fr;
         grid-template-areas:

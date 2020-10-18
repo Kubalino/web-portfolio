@@ -15,15 +15,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="default.css">
+
+    <link id="theme-style" class="dark-theme" rel="stylesheet" type="text/css" href="light.css">
+
 </head>
 <body>
 
-    <div>
+    
         <nav class="nav">
             <div class="nav-container">
-                <div class="logo">
-                    <a href="#">Carlos Noronha</a>
+                <div class="left-wrapper">
+                    <div class="logo">
+                        <a href="#">Carlos Noronha</a>
+                    </div>
+                    <div class="light-theme">
+                        <p>Light</p>
+                        <div data-mode="light" id="light-mode" class="theme-dot"></div>
+                        
+                    </div>
+                    <div class="dark-theme">
+                        <p>Dark</p>
+                        <div data-mode="dark" id="dark-mode" class="theme-dot"></div>
+                    </div>
                 </div>
+
                 <div id="mainListDiv" class="main_list">
                     <ul class="navlinks">
                         <li><a href="?/html#about">Who Am I</a></li>
@@ -38,7 +53,7 @@
                 </span>
             </div>
         </nav>
-    </div>
+    
 
     <section id="hero">
         <div class="hero container">
@@ -174,7 +189,7 @@
 
             <div class="post-wrapper">
                 
-                <div class="post-wrapper">
+                <div>
                     <div class="post">
                         <img class="thumbnail" src="./assets/project-3.PNG" alt="project-3">
                         <div class="post-preview">
@@ -249,10 +264,12 @@
                 <input class="input-field" type="text" name="email">
 
                 <label>Message</label>
-                <textarea class="input-field" name="message"></textarea>
+                <textarea class="input-field" name="message" class="pageclip-form__submit"
+                ></textarea>
 
-                <button id="submit-btn" type="submit" class="pageclip-form__submit">
-                    <span>Send</span>
+
+                <button id="submit-btn" type="submit">
+                    <span class="submit-span">Send</span>
                 </button>
             </form>
         </div>
@@ -280,6 +297,6 @@
     <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
 
     <script src="index.js"></script>
-    
+        
 </body>
 </html>
