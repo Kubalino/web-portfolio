@@ -834,7 +834,9 @@ footer {
         width: 100%;
         font-size: 2rem;
         padding: 20px;
+        color: var(--secondaryText);
     }
+
     .nav div.media_button {
         display: block;
     }
