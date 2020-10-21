@@ -188,16 +188,15 @@ h6 {font-size: 16px;}
 }
 
 .nav {
-    padding-top: 20px;
-    padding-bottom: 20px;
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
 }
 
 .affix {
-    padding: 0px;
+    padding: 0;
+    height: 75px;
     background-color: var(--mainColor);
-    border-bottom: 2px solid var(--previewBG);
+    border-bottom: 2px solid var(--secondaryText);
 }
 
 .affix div.main_list ul li a {
@@ -360,7 +359,7 @@ h6 {font-size: 16px;}
     display: inline-block;
     padding: 10px 30px;
     color: var(--secondaryText);
-    background-color: transparent;
+    background-color: rgba(241, 245, 247, 0.3);
     border: 2px solid var(--secondaryText);
     border-radius: 7px;
     font-size: 2rem;
